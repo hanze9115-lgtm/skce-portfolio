@@ -79,6 +79,39 @@
       });
     }
 
+    // ── Scroll reveal ────────────────────────────────────────────────────
+    var revealEls = [].slice.call(scope.querySelectorAll('[data-reveal]'));
+
+    // Stagger siblings inside grid containers
+    ['[data-stat-grid]','[data-awards-grid]','[data-act-grid]','[data-edge-grid]','[data-roadmap-grid]'].forEach(function(sel) {
+      var grid = scope.querySelector(sel);
+      if (!grid) return;
+      grid.querySelectorAll('[data-reveal]').forEach(function(el, i) {
+        el.style.transitionDelay = (i * 0.08) + 's';
+      });
+    });
+
+    function revealNow(el) { el.classList.add('is-visible'); }
+
+    if ('IntersectionObserver' in window) {
+      var revealIo = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) { revealNow(e.target); revealIo.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -60px 0px', threshold: 0.06 });
+
+      revealEls.forEach(function(el) {
+        var r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight && r.bottom > 0) {
+          revealNow(el); // already in viewport — instant
+        } else {
+          revealIo.observe(el);
+        }
+      });
+    } else {
+      revealEls.forEach(revealNow); // fallback
+    }
+
     // ── Mouse parallax on the atmospheric backdrop blobs ─────────────────
     window.addEventListener('mousemove', function (ev) {
       var x = (ev.clientX / window.innerWidth - 0.5);

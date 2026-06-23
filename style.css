@@ -401,7 +401,20 @@
   html { scroll-behavior: smooth; }
   body { margin: 0; background: #ECE8E3; color: #16161a; font-family: 'Pretendard', -apple-system, system-ui, sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; overflow-x: hidden; }
   ::selection { background: var(--accent); color: #fff; }
-  [data-reveal] { opacity: 1; transform: none; }
+  /* Scroll reveal — initial hidden state */
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  [data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+  }
   @keyframes drift1 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(60px,-50px) scale(1.12); } }
   @keyframes drift2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-70px,40px) scale(1.08); } }
   @keyframes drift3 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(40px,60px) scale(1.15); } }
@@ -439,6 +452,9 @@ img.slot-img[src]:not([src=""]) ~ div[style*="1.5px dashed"] {
 
   /* 수평 스크롤 방지 */
   body { overflow-x: hidden; }
+
+  /* 모바일 reveal: 이동 거리·시간 축소 */
+  [data-reveal] { transform: translateY(16px); transition-duration: 0.5s; }
 
   /* ── 햄버거 네비게이션 ─────────────────────────────── */
   [data-desknav]           { display: none !important; }
