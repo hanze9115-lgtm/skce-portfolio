@@ -557,4 +557,45 @@ img.slot-img[src]:not([src=""]) ~ div[style*="1.5px dashed"] {
 
   /* Gallery 마퀴: 애니메이션 유지, 높이만 축소 */
   [data-gallery-strip] > div { height: 220px !important; }
+
+  /* ════════════════ 모바일 디자인 완성도 보정 ════════════════ */
+
+  /* ① 섹션 세로 여백 축소 (PC 88px → 모바일 60px). 빈 공간 과다 해소 */
+  section[style*="88px"] {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+  /* 히어로 상단 여백 축소 (고정 네비 클리어는 유지) */
+  #hero { padding-top: 112px !important; }
+  /* 마지막 Connect 섹션 하단 여백 축소 */
+  #connect { padding-bottom: 64px !important; }
+
+  /* ② 섹션 헤더: 부제목이 큰 제목 옆에서 한 글자씩 깨지지 않도록
+        줄바꿈을 허용해 자연스럽게 아랫줄로 흐르게 함 */
+  section [data-reveal][style*="align-items:baseline"] {
+    flex-wrap: wrap;
+    row-gap: 2px;
+  }
+  /* 헤더 끝 설명 텍스트(— 학적 정보 등)는 줄 전체를 차지 */
+  section [data-reveal][style*="align-items:baseline"] > span:last-child {
+    flex-basis: 100%;
+  }
+
+  /* ③ 갤러리 인스타그램 프로필 바: 가로 1줄(텍스트 깨짐) → 세로 스택 */
+  #gallery > div:first-child > div[data-reveal]:last-child {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 14px !important;
+  }
+  /* 프로필 썸네일은 좌측 고정 크기 유지 */
+  #gallery > div:first-child > div[data-reveal]:last-child > div:first-child {
+    width: 60px !important;
+    height: 60px !important;
+    flex: none !important;
+  }
+  /* CTA 버튼은 전체 폭 + 가운데 정렬 */
+  #gallery > div:first-child > div[data-reveal]:last-child > a {
+    justify-content: center;
+    text-align: center;
+  }
 }
