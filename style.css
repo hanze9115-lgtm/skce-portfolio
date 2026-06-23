@@ -433,7 +433,7 @@ img.slot-img[src]:not([src=""]) {
 }
 img.slot-img[src]:not([src=""]) ~ .slot-placeholder,
 img.slot-img[src]:not([src=""]) ~ div[style*="1.5px dashed"] {
-  display: none;
+  display: none !important;
 }
 
 /* ─────────────────────────────────────────────────────────────────────
