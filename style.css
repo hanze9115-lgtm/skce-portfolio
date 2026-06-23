@@ -614,4 +614,14 @@ img.slot-img[src]:not([src=""]) ~ div[style*="1.5px dashed"] {
     justify-content: center;
     text-align: center;
   }
+
+  /* Certificates 행: 모바일에서 한 줄 정렬 */
+  #skills ~ section [data-reveal][style*="flex-wrap:wrap"][style*="background:rgba(22,22,26"] {
+    gap: 6px !important;
+    padding: 16px 20px !important;
+  }
+  #skills ~ section [data-reveal][style*="flex-wrap:wrap"][style*="background:rgba(22,22,26"] > span {
+    font-size: 11px !important;
+    padding: 5px 10px !important;
+  }
 }
