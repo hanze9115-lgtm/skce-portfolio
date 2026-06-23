@@ -528,6 +528,29 @@ img.slot-img[src]:not([src=""]) ~ div[style*="1.5px dashed"] {
     box-shadow: 0 8px 20px -8px rgba(var(--accent-rgb), 0.7);
   }
 
+  /* ── 프로필 카드: 사진 상단 가운데 + 정보 아래 배치 ── */
+  [data-stat-grid] > [data-reveal]:first-child > div:first-child {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+  }
+  [data-stat-grid] > [data-reveal]:first-child > div:first-child > div:first-child {
+    width: 130px !important;
+    height: 160px !important;
+    flex: none !important;
+    border-radius: 20px !important;
+  }
+  [data-stat-grid] > [data-reveal]:first-child > div:first-child > div:last-child {
+    width: 100%;
+    text-align: center;
+    min-width: 0;
+  }
+  [data-stat-grid] > [data-reveal]:first-child > div:last-child {
+    justify-content: center;
+    gap: 32px !important;
+    text-align: center;
+  }
+
   /* ── 고정 너비로 인한 오버플로 수정 ────────────────── */
   /* 히어로: 왼쪽 컬럼(506px 이미지) + 오른쪽 카드(504×731) */
   [data-hero-grid] { grid-template-columns: 1fr !important; }
