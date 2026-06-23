@@ -423,25 +423,16 @@ img.slot-img[src]:not([src=""]) ~ div[style*="1.5px dashed"] {
   display: none;
 }
 
-/* ═══════════════════════════════════════════════════════════════════════
-   MOBILE RESPONSIVE — 768px 이하
-   ═══════════════════════════════════════════════════════════════════════ */
+/* ══════════════════════════════════════════════════════════════════════
+   MOBILE ONLY — 768px 이하에서만 적용. PC 스타일 무변경.
+   PC에 영향 없는 신규 요소(#mob-ham, #mob-cta) 기본값만 전역 설정.
+   ══════════════════════════════════════════════════════════════════════ */
 
-/* 햄버거 버튼 기본 (데스크톱에서 숨김) */
-#mob-ham {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 36px;
-  height: 36px;
-  padding: 0 8px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  border-radius: 8px;
-  flex-shrink: 0;
-}
+/* 신규 HTML 요소: 데스크톱에서 보이지 않도록 초기화 */
+#mob-ham { display: none; }
+#mob-cta { display: none !important; }
+
+/* 햄버거 선 스타일 (display:none 상태에서도 미리 정의) */
 #mob-ham span {
   display: block;
   width: 20px;
@@ -452,25 +443,39 @@ img.slot-img[src]:not([src=""]) ~ div[style*="1.5px dashed"] {
   transform-origin: center;
 }
 
-/* 모바일 전용 CTA — 데스크톱에서 숨김 */
-#mob-cta { display: none !important; }
-
 @media (max-width: 768px) {
 
-  /* ── 네비게이션 ──────────────────────────────────── */
-  [data-desknav]            { display: none !important; }
-  nav > a[href="#connect"]  { display: none !important; }
-  #mob-ham                  { display: flex; }
+  /* 수평 스크롤 차단 */
+  body { overflow-x: hidden; }
 
-  /* nav를 드롭다운 기준점으로 */
+  /* ── 네비게이션 ──────────────────────────────────────── */
+  /* 데스크톱 링크·CTA 숨기고 햄버거 노출 */
+  [data-desknav]           { display: none !important; }
+  nav > a[href="#connect"] { display: none !important; }
+  #mob-ham {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    padding: 0 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  /* 드롭다운 위치 기준 */
   nav { position: relative !important; }
 
-  /* 햄버거 → X 전환 */
+  /* 햄버거 → X */
   nav.mob-open #mob-ham span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  nav.mob-open #mob-ham span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  nav.mob-open #mob-ham span:nth-child(2) { opacity: 0; }
   nav.mob-open #mob-ham span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-  /* 드롭다운 오버레이 */
+  /* 드롭다운 메뉴 */
   nav.mob-open [data-desknav] {
     display: flex !important;
     flex-direction: column;
@@ -478,6 +483,7 @@ img.slot-img[src]:not([src=""]) ~ div[style*="1.5px dashed"] {
     top: calc(100% + 8px);
     left: 0;
     right: 0;
+    z-index: 10;
     background: rgba(239,235,230,0.97);
     backdrop-filter: blur(26px) saturate(170%);
     -webkit-backdrop-filter: blur(26px) saturate(170%);
@@ -486,115 +492,70 @@ img.slot-img[src]:not([src=""]) ~ div[style*="1.5px dashed"] {
     padding: 10px;
     box-shadow: 0 14px 40px -10px rgba(20,20,40,0.28);
     gap: 2px;
-    z-index: 10;
   }
   nav.mob-open [data-desknav] a[data-nav] {
-    padding: 13px 14px !important;
-    font-size: 14px !important;
+    padding: 12px 14px !important;
+    font-size: 13px !important;
     border-radius: 10px;
-    transition: background 0.15s;
   }
-  nav.mob-open [data-desknav] a[data-nav]:hover {
-    background: rgba(0,0,0,0.05);
-  }
-
-  /* 드롭다운 안 CTA 버튼 */
   nav.mob-open #mob-cta {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
+    display: block !important;
     margin: 6px 0 2px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    background: var(--accent);
+    color: #fff;
     font-family: Pretendard, sans-serif;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.04em;
-    color: #fff;
-    background: var(--accent);
-    padding: 13px 16px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px -8px rgba(var(--accent-rgb), 0.7);
     text-align: center;
+    box-shadow: 0 8px 20px -8px rgba(var(--accent-rgb), 0.7);
   }
 
-  /* ── 섹션 공통 ─────────────────────────────────── */
-  section {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
-
-  /* ── 히어로 ────────────────────────────────────── */
-  #hero { padding-top: 100px !important; }
-
+  /* ── 오버플로 유발 고정 너비 해제 ──────────────────── */
+  /* 히어로 이미지(506px), 통계 카드(504px×731px) */
   [data-hero-grid] { grid-template-columns: 1fr !important; }
-
-  /* 히어로 메인 이미지 — 고정 506px 해제 */
   [data-hero-grid] > [data-reveal]:first-child > div:first-child {
     width: 100% !important;
     height: auto !important;
   }
-
-  /* 히어로 통계 카드 — 고정 504×731 해제 */
   [data-hero-grid] > [data-reveal]:last-child {
     width: 100% !important;
     height: auto !important;
   }
 
-  /* ── 텍스트 크기 ────────────────────────────────── */
-  /* 히어로 배지 태그 */
-  [data-herotags] span { font-size: 11px !important; }
-
-  /* ── 프로필 ────────────────────────────────────── */
+  /* ── 좁은 화면에서 깨지는 다열 그리드 축소 ─────────── */
+  /* 프로필 4열 → 1열 */
   [data-stat-grid] { grid-template-columns: 1fr !important; }
   [data-stat-grid] > [data-reveal] { grid-column: span 1 !important; }
 
-  /* ── 콘텐츠 ────────────────────────────────────── */
-  [data-feat-grid]    { grid-template-columns: 1fr !important; }
+  /* 채널H 피처 2열 → 1열 */
+  [data-feat-grid] { grid-template-columns: 1fr !important; }
+
+  /* 홈즈코어+툴킷 2열 → 1열 */
   [data-content-grid] { grid-template-columns: 1fr !important; }
 
-  /* ── 수상 ──────────────────────────────────────── */
+  /* 수상 2열 → 1열, 내부 auto·1fr·auto 배너도 1열 */
   [data-awards-grid] { grid-template-columns: 1fr !important; }
-  /* span 2 → span 1, 내부 auto 3열 → 1열 */
   [data-awards-grid] > [data-reveal] {
     grid-column: span 1 !important;
     grid-template-columns: 1fr !important;
   }
 
-  /* ── 활동 ──────────────────────────────────────── */
+  /* 활동 3열 → 1열, 서담장학재단 배너 내부도 1열 */
   [data-act-grid] { grid-template-columns: 1fr !important; }
-  /* span 3 → span 1, 서담장학재단 내부 auto 3열 → 1열 */
   [data-act-grid] > [data-reveal] {
     grid-column: span 1 !important;
     grid-template-columns: 1fr !important;
   }
 
-  /* ── Edge ──────────────────────────────────────── */
-  [data-edge-grid] { grid-template-columns: 1fr !important; }
+  /* Edge 3열 → 2열 (카드가 작아 2열로도 충분) */
+  [data-edge-grid] { grid-template-columns: repeat(2, 1fr) !important; }
 
-  /* ── 로드맵 ────────────────────────────────────── */
+  /* 로드맵 248px+1fr → 1열 */
   [data-roadmap-grid] > [data-reveal] { grid-template-columns: 1fr !important; }
 
-  /* ── 갤러리 — 마퀴 → 2열 그리드 ──────────────── */
-  /* 마스크·오버플로 해제 */
-  #gallery > div:last-child {
-    overflow: visible !important;
-    -webkit-mask-image: none !important;
-    mask-image: none !important;
-    padding: 0 16px;
-  }
-
-  [data-gallery-strip] {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    animation: none !important;
-    width: 100% !important;
-    padding: 0 !important;
-    gap: 10px !important;
-  }
-  [data-gallery-strip] > div {
-    height: auto !important;
-    flex: none !important;
-    aspect-ratio: 3 / 4;
-  }
-  /* 중복 미러 세트 숨김 (앞 10개만 표시) */
-  [data-gallery-strip] > div:nth-child(n+11) { display: none !important; }
+  /* ── 갤러리 마퀴 — 원본 유지, 높이만 줄임 ──────────── */
+  [data-gallery-strip] > div { height: 220px !important; }
 }
