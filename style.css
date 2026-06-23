@@ -422,3 +422,179 @@ img.slot-img[src]:not([src=""]) ~ .slot-placeholder,
 img.slot-img[src]:not([src=""]) ~ div[style*="1.5px dashed"] {
   display: none;
 }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   MOBILE RESPONSIVE — 768px 이하
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* 햄버거 버튼 기본 (데스크톱에서 숨김) */
+#mob-ham {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 0 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+#mob-ham span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #16161a;
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.2s;
+  transform-origin: center;
+}
+
+/* 모바일 전용 CTA — 데스크톱에서 숨김 */
+#mob-cta { display: none !important; }
+
+@media (max-width: 768px) {
+
+  /* ── 네비게이션 ──────────────────────────────────── */
+  [data-desknav]            { display: none !important; }
+  nav > a[href="#connect"]  { display: none !important; }
+  #mob-ham                  { display: flex; }
+
+  /* nav를 드롭다운 기준점으로 */
+  nav { position: relative !important; }
+
+  /* 햄버거 → X 전환 */
+  nav.mob-open #mob-ham span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  nav.mob-open #mob-ham span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  nav.mob-open #mob-ham span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* 드롭다운 오버레이 */
+  nav.mob-open [data-desknav] {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: rgba(239,235,230,0.97);
+    backdrop-filter: blur(26px) saturate(170%);
+    -webkit-backdrop-filter: blur(26px) saturate(170%);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 10px;
+    box-shadow: 0 14px 40px -10px rgba(20,20,40,0.28);
+    gap: 2px;
+    z-index: 10;
+  }
+  nav.mob-open [data-desknav] a[data-nav] {
+    padding: 13px 14px !important;
+    font-size: 14px !important;
+    border-radius: 10px;
+    transition: background 0.15s;
+  }
+  nav.mob-open [data-desknav] a[data-nav]:hover {
+    background: rgba(0,0,0,0.05);
+  }
+
+  /* 드롭다운 안 CTA 버튼 */
+  nav.mob-open #mob-cta {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin: 6px 0 2px;
+    font-family: Pretendard, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #fff;
+    background: var(--accent);
+    padding: 13px 16px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px -8px rgba(var(--accent-rgb), 0.7);
+    text-align: center;
+  }
+
+  /* ── 섹션 공통 ─────────────────────────────────── */
+  section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* ── 히어로 ────────────────────────────────────── */
+  #hero { padding-top: 100px !important; }
+
+  [data-hero-grid] { grid-template-columns: 1fr !important; }
+
+  /* 히어로 메인 이미지 — 고정 506px 해제 */
+  [data-hero-grid] > [data-reveal]:first-child > div:first-child {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 히어로 통계 카드 — 고정 504×731 해제 */
+  [data-hero-grid] > [data-reveal]:last-child {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* ── 텍스트 크기 ────────────────────────────────── */
+  /* 히어로 배지 태그 */
+  [data-herotags] span { font-size: 11px !important; }
+
+  /* ── 프로필 ────────────────────────────────────── */
+  [data-stat-grid] { grid-template-columns: 1fr !important; }
+  [data-stat-grid] > [data-reveal] { grid-column: span 1 !important; }
+
+  /* ── 콘텐츠 ────────────────────────────────────── */
+  [data-feat-grid]    { grid-template-columns: 1fr !important; }
+  [data-content-grid] { grid-template-columns: 1fr !important; }
+
+  /* ── 수상 ──────────────────────────────────────── */
+  [data-awards-grid] { grid-template-columns: 1fr !important; }
+  /* span 2 → span 1, 내부 auto 3열 → 1열 */
+  [data-awards-grid] > [data-reveal] {
+    grid-column: span 1 !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── 활동 ──────────────────────────────────────── */
+  [data-act-grid] { grid-template-columns: 1fr !important; }
+  /* span 3 → span 1, 서담장학재단 내부 auto 3열 → 1열 */
+  [data-act-grid] > [data-reveal] {
+    grid-column: span 1 !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Edge ──────────────────────────────────────── */
+  [data-edge-grid] { grid-template-columns: 1fr !important; }
+
+  /* ── 로드맵 ────────────────────────────────────── */
+  [data-roadmap-grid] > [data-reveal] { grid-template-columns: 1fr !important; }
+
+  /* ── 갤러리 — 마퀴 → 2열 그리드 ──────────────── */
+  /* 마스크·오버플로 해제 */
+  #gallery > div:last-child {
+    overflow: visible !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+    padding: 0 16px;
+  }
+
+  [data-gallery-strip] {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    animation: none !important;
+    width: 100% !important;
+    padding: 0 !important;
+    gap: 10px !important;
+  }
+  [data-gallery-strip] > div {
+    height: auto !important;
+    flex: none !important;
+    aspect-ratio: 3 / 4;
+  }
+  /* 중복 미러 세트 숨김 (앞 10개만 표시) */
+  [data-gallery-strip] > div:nth-child(n+11) { display: none !important; }
+}

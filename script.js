@@ -61,6 +61,24 @@
       scope.querySelectorAll('section[id]').forEach(function (s) { navIo.observe(s); });
     }
 
+    // ── Hamburger menu ───────────────────────────────────────────────────
+    var ham = document.getElementById('mob-ham');
+    var mobNav = ham && ham.closest('nav');
+    if (ham && mobNav) {
+      ham.addEventListener('click', function (e) {
+        e.stopPropagation();
+        mobNav.classList.toggle('mob-open');
+      });
+      document.addEventListener('click', function (e) {
+        if (mobNav.classList.contains('mob-open') && !mobNav.contains(e.target)) {
+          mobNav.classList.remove('mob-open');
+        }
+      });
+      mobNav.querySelectorAll('[data-desknav] a').forEach(function (a) {
+        a.addEventListener('click', function () { mobNav.classList.remove('mob-open'); });
+      });
+    }
+
     // ── Mouse parallax on the atmospheric backdrop blobs ─────────────────
     window.addEventListener('mousemove', function (ev) {
       var x = (ev.clientX / window.innerWidth - 0.5);
