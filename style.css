@@ -565,8 +565,8 @@ img.slot-img[src]:not([src=""]) ~ div[style*="1.5px dashed"] {
     grid-template-columns: 1fr !important;
   }
 
-  /* Edge 3열 → 2열 */
-  [data-edge-grid] { grid-template-columns: repeat(2, 1fr) !important; }
+  /* Edge 3열 → 1열 (세로 쌓기) */
+  [data-edge-grid] { grid-template-columns: 1fr !important; }
 
   /* Roadmap 248px+1fr → 1열 */
   [data-roadmap-grid] > [data-reveal] { grid-template-columns: 1fr !important; }
