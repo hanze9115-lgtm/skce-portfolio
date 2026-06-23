@@ -1,0 +1,424 @@
+﻿/* SKCE Portfolio - extracted styles (fonts + base + page) */
+/* vietnamese */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/8ef8552e-50bb-470a-b59c-5da4d69e5d32.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/001ad6b6-4b40-451b-9dad-e10bbde769e5.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/e6cd34a9-35aa-4d8e-841f-c2c71754e1b7.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/08e1d5ac-92dc-40f1-a9b4-a9e0870c123d.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/f26a2973-a64a-4637-9b9f-66445c6c6bca.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/cacac05b-d3b8-41e1-b56a-1783bd6bf706.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/08e1d5ac-92dc-40f1-a9b4-a9e0870c123d.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/f26a2973-a64a-4637-9b9f-66445c6c6bca.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/cacac05b-d3b8-41e1-b56a-1783bd6bf706.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/08e1d5ac-92dc-40f1-a9b4-a9e0870c123d.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/f26a2973-a64a-4637-9b9f-66445c6c6bca.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/cacac05b-d3b8-41e1-b56a-1783bd6bf706.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/08e1d5ac-92dc-40f1-a9b4-a9e0870c123d.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/f26a2973-a64a-4637-9b9f-66445c6c6bca.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/cacac05b-d3b8-41e1-b56a-1783bd6bf706.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/08e1d5ac-92dc-40f1-a9b4-a9e0870c123d.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/f26a2973-a64a-4637-9b9f-66445c6c6bca.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/cacac05b-d3b8-41e1-b56a-1783bd6bf706.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/08e1d5ac-92dc-40f1-a9b4-a9e0870c123d.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/f26a2973-a64a-4637-9b9f-66445c6c6bca.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/cacac05b-d3b8-41e1-b56a-1783bd6bf706.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/ef9bf25a-2d40-47d4-a431-7c6cdba2858a.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/d979704c-9ae6-487a-a3af-37e31f7c409a.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/2f0fe274-b427-4629-a6ee-1abc0b02ea54.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/87115db6-4fe0-43f5-98d4-cd6140bd55f1.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/10d75ac8-c648-4a10-8bff-32bd1466e5ba.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/2f0fe274-b427-4629-a6ee-1abc0b02ea54.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/87115db6-4fe0-43f5-98d4-cd6140bd55f1.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/10d75ac8-c648-4a10-8bff-32bd1466e5ba.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/2f0fe274-b427-4629-a6ee-1abc0b02ea54.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/87115db6-4fe0-43f5-98d4-cd6140bd55f1.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/10d75ac8-c648-4a10-8bff-32bd1466e5ba.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/2f0fe274-b427-4629-a6ee-1abc0b02ea54.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/87115db6-4fe0-43f5-98d4-cd6140bd55f1.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/10d75ac8-c648-4a10-8bff-32bd1466e5ba.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/988731ab-4a39-4fe1-b66c-cd9b50846316.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/3093d518-ab12-4e49-8ea9-8ca15379642f.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/e4502176-56df-441b-b2ae-0564df27b9f3.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/4dde6d75-545b-413a-a464-3789d6a49172.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/85e095c5-04c3-464b-a153-2a446102a4c4.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/5adb9fe8-15f7-4ffb-90d7-5f57a25a018d.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/**
+ * Minified by jsDelivr using clean-css v5.3.3.
+ * Original file: /gh/orioncactus/pretendard@1.3.9/dist/web/static/pretendard.css
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+@font-face{font-family:Pretendard;font-weight:900;font-display:swap;src:local('Pretendard Black'),url("assets/d7852130-2e23-4f77-abd9-4950f4a72314.woff2") format('woff2'),url("assets/5c0a4503-45ae-413e-807e-0a19dbf2de8a.woff") format('woff')}@font-face{font-family:Pretendard;font-weight:800;font-display:swap;src:local('Pretendard ExtraBold'),url("assets/13a69ced-3f20-4e94-a3f3-8e3548c1fe5b.woff2") format('woff2'),url("assets/ffcece3b-043b-47d5-9ee7-5e48b76201c7.woff") format('woff')}@font-face{font-family:Pretendard;font-weight:700;font-display:swap;src:local('Pretendard Bold'),url("assets/70f511ec-fa0d-4fbf-a588-aa02259e26df.woff2") format('woff2'),url("assets/79898c74-d7d9-40fa-8fe2-0cd0025513fb.woff") format('woff')}@font-face{font-family:Pretendard;font-weight:600;font-display:swap;src:local('Pretendard SemiBold'),url("assets/cbcdca5e-65c2-4be5-b668-96b441e12dbf.woff2") format('woff2'),url("assets/4d45bad4-89b0-4812-9680-66adb9f38158.woff") format('woff')}@font-face{font-family:Pretendard;font-weight:500;font-display:swap;src:local('Pretendard Medium'),url("assets/46496dd9-f22e-4132-9b6d-51fa02b5d787.woff2") format('woff2'),url("assets/bc9843ae-6f29-4023-a5d2-9f7767656fff.woff") format('woff')}@font-face{font-family:Pretendard;font-weight:400;font-display:swap;src:local('Pretendard Regular'),url("assets/7a2d64a4-e4f0-46c8-b531-f3653933f03e.woff2") format('woff2'),url("assets/54113efc-1f20-4303-b359-ee78d72d2997.woff") format('woff')}@font-face{font-family:Pretendard;font-weight:300;font-display:swap;src:local('Pretendard Light'),url("assets/1576c4ff-8429-4927-97e0-254b497dce78.woff2") format('woff2'),url("assets/828ac37e-ce9d-46bf-962e-54828cd6ff90.woff") format('woff')}@font-face{font-family:Pretendard;font-weight:200;font-display:swap;src:local('Pretendard ExtraLight'),url("assets/b91ac001-3e43-496f-bed0-0a4ca6b6f1a8.woff2") format('woff2'),url("assets/4fd42188-c856-4b1a-872b-3fc04aeb84d8.woff") format('woff')}@font-face{font-family:Pretendard;font-weight:100;font-display:swap;src:local('Pretendard Thin'),url("assets/00a0f840-5015-49be-bc88-aa3b3233df8d.woff2") format('woff2'),url("assets/16afad21-a42f-4a2d-b277-8525b0083f37.woff") format('woff')}
+
+
+  :root { --accent:#EA002C; --accent-rgb:234,0,44; --display:'Space Grotesk','Pretendard',sans-serif; --glass-bg:rgba(255,255,255,0.5); --glass-border:rgba(255,255,255,0.72); --glass-blur:30px; --radius:28px; --ink:#16161a; --bg1:#EFEBE6; --bg2:#E6E1DB; --blob2:255,150,110; --blob3:120,150,210; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #ECE8E3; color: #16161a; font-family: 'Pretendard', -apple-system, system-ui, sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; overflow-x: hidden; }
+  ::selection { background: var(--accent); color: #fff; }
+  [data-reveal] { opacity: 1; transform: none; }
+  @keyframes drift1 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(60px,-50px) scale(1.12); } }
+  @keyframes drift2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-70px,40px) scale(1.08); } }
+  @keyframes drift3 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(40px,60px) scale(1.15); } }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes marquee-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  a { text-decoration: none; color: inherit; }
+
+
+/* ── Image slot: 이미지 교체 방법 ──────────────────────────────────────────
+   <img class="slot-img"> 태그의 src 속성에 파일 경로를 입력하면 자동으로
+   표시됩니다. 예: src="assets/my-photo.jpg"
+   플레이스홀더(카메라 아이콘)는 src가 비어있을 때만 보입니다.
+   ───────────────────────────────────────────────────────────────────────── */
+img.slot-img[src]:not([src=""]) {
+  display: block !important;
+}
+img.slot-img[src]:not([src=""]) ~ .slot-placeholder,
+img.slot-img[src]:not([src=""]) ~ div[style*="1.5px dashed"] {
+  display: none;
+}

@@ -1,0 +1,9 @@
+# 서버 스크립트 (로컬 전용)
+serve.ps1
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
